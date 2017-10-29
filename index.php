@@ -53,7 +53,9 @@ $archivo=fopen("archivo.txt","w");
 fclose($archivo);
 
 $file = fopen("archivo.txt", "a+");
-fputs($file,$ganador);
+$salida = $ganador ." ".($cantJ1 > $cantJ2? $cantJ1 : $cantJ2);
+var_dump( $salida);
+fputs($file,$salida);
 fclose($file);
 
 fclose($fp);
