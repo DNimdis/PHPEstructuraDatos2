@@ -18,7 +18,8 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
 
 
 
-  if($fp = fopen($_FILES['fileTXT']['name'], "r")){
+  if($fp = fopen($_FILES['fileTXT']['tmp_name'], "r")){
+
     while(!feof($fp)) {
       $linea = fgets($fp);
       if (!empty($linea)) {
